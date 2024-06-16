@@ -1,26 +1,48 @@
+body{
+    margin: 0;
+}
 
-.bg {
-    position: absolute;
+#bg {
+    position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
 }
 
 main{
     position: absolute;
-  
     top: 0;
-    z-index: 1;
+    left: 0;
+    z-index: 99;
     width: 100%;
-    display: flex;
+    min-height: 100vh;
+    overflow-y: auto;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
 }   
+
 .container{
-    margin: auto;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.popup{
+    grid-column: 2/10;
+    border: solid 5px tomato;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 30rem;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+
 h1, h2, p{
+   
     display: block;
     color: tomato;
     font-weight: bold;
